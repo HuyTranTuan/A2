@@ -1,3 +1,6 @@
+* {
+  user-select: none;
+}
 .voucher-carousel-wrapper {
   width: 100%;
   visibility: visible;
@@ -10,6 +13,9 @@
   transition-duration: 0.3s;
   transition-timing-function: ease-in;
 }
+.voucher-carousel-container {
+  position: relative;
+}
 
 .voucher-carousel-wrapper::-webkit-scrollbar {
   display: none; /* Chrome, Safari: ẩn scrollbar ngang */
@@ -17,7 +23,6 @@
 
 .voucher-carousel {
   width: 100%;
-  height: 430px;
   display: flex;
   flex-wrap: nowrap;
   transition: transform;
@@ -76,10 +81,10 @@
 }
 
 .left-arrow-container {
-  left: 0px;
+  left: 10px;
 }
 .right-arrow-container {
-  right: 0px;
+  right: 10px;
 }
 
 .left-arrow-container:hover,
@@ -107,4 +112,12 @@
 }
 .dot.active-dot {
   background-color: #aaa;
+}
+
+/* Smartphones (portrait) (ie: Galaxy 1) */
+@media only screen and (max-width: 500px) {
+  .left-arrow-container,
+  .right-arrow-container {
+    display: none;
+  }
 }
