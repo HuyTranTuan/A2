@@ -92,8 +92,6 @@ function slideNext(){
     let activeSlide = $('.voucher-slide.active');
     let pageList = $$('.dot')
     let activePage = $('.dot.active-dot')
-    console.log(activeSlide)
-    console.log(activePage)
     if(activeSlide){
         removeActiveClass(pageList, voucherCarouselList);
         if(activeSlide.tabIndex === voucherCarouselList.length - 1){
