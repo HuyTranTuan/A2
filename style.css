@@ -1,0 +1,110 @@
+.voucher-carousel-wrapper {
+  width: 100%;
+  visibility: visible;
+  opacity: 1;
+  align-items: center;
+  position: relative;
+  margin: auto;
+  overflow: hidden;
+  transition: opacity, visibility;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in;
+}
+
+.voucher-carousel-wrapper::-webkit-scrollbar {
+  display: none; /* Chrome, Safari: ẩn scrollbar ngang */
+}
+
+.voucher-carousel {
+  width: 100%;
+  height: 430px;
+  display: flex;
+  flex-wrap: nowrap;
+  transition: transform;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in;
+}
+
+.voucher-slide {
+  flex: 0 0 90%;
+  max-width: 90%;
+  height: 360px;
+  border-radius: 15px;
+  background-size: cover;
+  background-position: center;
+  scroll-snap-align: center;
+  position: relative;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+  opacity: 0.4;
+  transform: scale(0.85);
+  overflow: hidden;
+}
+
+.voucher-slide.active {
+  border: 2px solid #4caf50;
+  transform: scale(0.95);
+}
+
+.voucher-slide.focused {
+  opacity: 1;
+  transform: scale(1);
+  z-index: 2;
+}
+
+.voucher-overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 1rem;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+  color: white;
+  border-radius: 0 0 20px 20px;
+}
+.left-arrow-container,
+.right-arrow-container {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  background-color: white;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.left-arrow-container {
+  left: 0px;
+}
+.right-arrow-container {
+  right: 0px;
+}
+
+.left-arrow-container:hover,
+.right-arrow-container:hover {
+  scale: 1.1;
+}
+.voucher-dots {
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: nowrap;
+  transition: transform;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in;
+}
+.dot {
+  width: 30px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #ddd;
+  object-fit: cover;
+  object-position: center;
+}
+.dot.active-dot {
+  background-color: #aaa;
+}
