@@ -34,8 +34,8 @@ function renderVoucherCarousel(){
     let pageHtml = "";
     data.Vouchers.forEach((voucher, index) => {
         pageHtml += `<span class="dot ${index === currentIndex ? " active-dot" : "" }"
-            dataindex="${index}"
-            ></span>`
+            dataindex="${index}" tabindex="${index}">
+            </span>`
     });
     voucherCarouselDots.innerHTML = pageHtml;
 
